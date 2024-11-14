@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "ExcelExample",
+      "request": "launch",
+      "mainClass": "ExcelExample",
+      "projectName": "EmployeePerformanceAnalysis_9872eb65"
+    },
+    {
+      "type": "java",
+      "name": "ChartTest",
+      "request": "launch",
+      "mainClass": "ChartTest",
+      "projectName": "EmployeePerformanceAnalysis_9872eb65"
+    },
+    {
+      "type": "java",
+      "name": "DatabaseTest",
+      "request": "launch",
+      "mainClass": "DatabaseTest",
+      "projectName": "EmployeePerformanceAnalysis_9872eb65"
+    },
+    {
+      "type": "java",
+      "name": "Launch EmployeePerformanceAnalysis",
+      "request": "launch",
+      "mainClass": "EmployeePerformanceAnalysis",
+      "vmArgs": "--module-path D:/EmployeePerformanceAnalysis/lib/javafx-sdk-23.0.1/lib --add-modules=javafx.controls,javafx.fxml -cp D:/EmployeePerformanceAnalysis/lib/sqlite-jdbc-3.47.0.0.jar;D:/EmployeePerformanceAnalysis/lib/jfreechart-1.0.19.jar;D:/EmployeePerformanceAnalysis/lib/jcommon-1.0.23.jar;D:/EmployeePerformanceAnalysis/lib/poi-5.2.3.jar;D:/EmployeePerformanceAnalysis/lib/poi-ooxml-5.2.3.jar;D:/EmployeePerformanceAnalysis/lib/poi-ooxml-schemas-5.2.3.jar;D:/EmployeePerformanceAnalysis/lib/xmlbeans-5.1.1.jar;D:/EmployeePerformanceAnalysis/lib/commons-collections4-4.4.jar;D:/EmployeePerformanceAnalysis/src"
+    }
+  ]
+}
