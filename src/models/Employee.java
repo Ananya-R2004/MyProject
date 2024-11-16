@@ -1,22 +1,35 @@
 package models;
 
 public class Employee {
+    private int id;
     private int employeeId;
     private String name;
-    private int departmentId;
     private String position;
     private double salary;
+    private int age;
+    private int departmentId;
+    private String departmentName;
 
-    // Constructor
-    public Employee(int employeeId, String name, int departmentId, String position, double salary) {
+    // Constructor with all parameters
+    public Employee(int id, int employeeId, String name, String position, double salary, int age, int departmentId) {
+        this.id = id;
         this.employeeId = employeeId;
         this.name = name;
-        this.departmentId = departmentId;
         this.position = position;
         this.salary = salary;
+        this.age = age;
+        this.departmentId = departmentId;
     }
 
     // Getters and Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getEmployeeId() {
         return employeeId;
     }
@@ -33,14 +46,6 @@ public class Employee {
         this.name = name;
     }
 
-    public int getDepartmentId() {
-        return departmentId;
-    }
-
-    public void setDepartmentId(int departmentId) {
-        this.departmentId = departmentId;
-    }
-
     public String getPosition() {
         return position;
     }
@@ -55,5 +60,43 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(int departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", employeeId=" + employeeId +
+                ", name='" + name + '\'' +
+                ", position='" + position + '\'' +
+                ", salary=" + salary +
+                ", age=" + age +
+                ", departmentId=" + departmentId +
+                ", departmentName='" + departmentName + '\'' +
+                '}';
     }
 }
