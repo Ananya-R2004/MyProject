@@ -1,6 +1,22 @@
 {
   "version": "0.2.0",
   "configurations": [
+
+    
+    {
+      "type": "java",
+      "name": "EmployeeApp",
+      "request": "launch",
+      "mainClass": "ui.EmployeeApp",
+      "projectName": "EmployeePerformanceAnalysis_9872eb65"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "ui.Main",
+      "projectName": "EmployeePerformanceAnalysis_9872eb65"
+    },
     {
       "type": "java",
       "name": "CRUDTest",
@@ -56,6 +72,24 @@
       "request": "launch",
       "mainClass": "util.DatabaseTest",
       "vmArgs": "--module-path D:/EmployeePerformanceAnalysis/lib/javafx-sdk-23.0.1/lib --add-modules=javafx.controls,javafx.fxml"
+    },
+    
+    {
+      "type": "java",
+      "name": "Launch CRUDTest",
+      "request": "launch",
+      "mainClass": "CRUDTest",
+      "projectName": "EmployeePerformanceAnalysis"
+    },
+    
+    {
+      "type": "java",
+      "name": "EmployeeApp",
+      "request": "launch",
+      "mainClass": "ui.EmployeeApp",
+      "vmArgs": "--module-path \"D:/EmployeePerformanceAnalysis/lib/javafx-sdk-23.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
     }
+    
+    
   ]
 }

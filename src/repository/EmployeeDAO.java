@@ -14,12 +14,12 @@ public class EmployeeDAO {
         try (Connection conn = DatabaseUtil.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setInt(1, employee.getEmployeeId());  // employee_id (unique ID assigned by your application)
-            pstmt.setString(2, employee.getName());    // name
-            pstmt.setString(3, employee.getPosition());    // position
-            pstmt.setDouble(4, employee.getSalary());   // salary
-            pstmt.setInt(5, employee.getAge());        // age
-            pstmt.setInt(6, employee.getDepartmentId()); // department_id (foreign key)
+            pstmt.setInt(1, employee.getEmployeeId());
+            pstmt.setString(2, employee.getName());
+            pstmt.setString(3, employee.getPosition());
+            pstmt.setDouble(4, employee.getSalary());
+            pstmt.setInt(5, employee.getAge());
+            pstmt.setInt(6, employee.getDepartmentId());
             pstmt.executeUpdate();
             System.out.println("Employee added successfully!");
         } catch (SQLException e) {
@@ -42,15 +42,15 @@ public class EmployeeDAO {
 
             while (rs.next()) {
                 Employee employee = new Employee(
-                        rs.getInt("id"),                     // Primary Key ID
-                        rs.getInt("employee_id"),            // Employee ID
-                        rs.getString("name"),                // Name
-                        rs.getString("position"),            // Position
-                        rs.getDouble("salary"),              // Salary
-                        rs.getInt("age"),                    // Age
-                        rs.getInt("department_id")           // Department ID
+                        rs.getInt("id"),
+                        rs.getInt("employee_id"),
+                        rs.getString("name"),
+                        rs.getString("position"),
+                        rs.getDouble("salary"),
+                        rs.getInt("age"),
+                        rs.getInt("department_id")
                 );
-                employee.setDepartmentName(rs.getString("department_name")); // Optional field
+                employee.setDepartmentName(rs.getString("department_name"));
                 employees.add(employee);
             }
         } catch (SQLException e) {
@@ -65,12 +65,12 @@ public class EmployeeDAO {
         try (Connection conn = DatabaseUtil.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setString(1, employee.getName());      // Update Name
-            pstmt.setString(2, employee.getPosition());  // Update Position
-            pstmt.setDouble(3, employee.getSalary());    // Update Salary
-            pstmt.setInt(4, employee.getAge());          // Update Age
-            pstmt.setInt(5, employee.getDepartmentId()); // Update Department ID
-            pstmt.setInt(6, employee.getId());           // Update based on Primary Key ID
+            pstmt.setString(1, employee.getName());
+            pstmt.setString(2, employee.getPosition());
+            pstmt.setDouble(3, employee.getSalary());
+            pstmt.setInt(4, employee.getAge());
+            pstmt.setInt(5, employee.getDepartmentId());
+            pstmt.setInt(6, employee.getId());
             pstmt.executeUpdate();
             System.out.println("Employee updated successfully!");
         } catch (SQLException e) {
@@ -84,7 +84,7 @@ public class EmployeeDAO {
         try (Connection conn = DatabaseUtil.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setInt(1, employeeId); // Delete based on Employee ID
+            pstmt.setInt(1, employeeId);
             pstmt.executeUpdate();
             System.out.println("Employee deleted successfully!");
         } catch (SQLException e) {

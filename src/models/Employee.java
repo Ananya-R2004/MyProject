@@ -1,16 +1,26 @@
 package models;
 
 public class Employee {
-    private int id;
-    private int employeeId;
+    private int id; // Primary key
+    private int employeeId; // Unique employee ID
     private String name;
-    private String position;
-    private double salary;
+    private String position; // Added
+    private double salary; // Added
     private int age;
     private int departmentId;
-    private String departmentName;
+    private String departmentName; // Optional field for display purposes
 
-    // Constructor with all parameters
+    // Constructor for adding/updating employees
+    public Employee(int employeeId, String name, String position, double salary, int age, int departmentId) {
+        this.employeeId = employeeId;
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
+        this.age = age;
+        this.departmentId = departmentId;
+    }
+
+    // Constructor for retrieving employees (with ID and optional department name)
     public Employee(int id, int employeeId, String name, String position, double salary, int age, int departmentId) {
         this.id = id;
         this.employeeId = employeeId;
@@ -21,7 +31,7 @@ public class Employee {
         this.departmentId = departmentId;
     }
 
-    // Getters and Setters
+    // Getters and setters
     public int getId() {
         return id;
     }
